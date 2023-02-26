@@ -41,7 +41,7 @@ int main()
 {
 	using namespace std;
 	string text = "";
-	int s = 4;
+	int s = 5;
 
 
 	int choice;
