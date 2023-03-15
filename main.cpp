@@ -1,4 +1,5 @@
 #include <iostream>
+#include <Windows.h>
 
 std::string encrypt(std::string text, int s)
 {
@@ -45,36 +46,40 @@ int main()
 
 
 	int choice;
-	cout << "Enter your choice \n1. Encryption \n2. Decryption \n";
+	cout << "1-Encryption \n2-Decryption \n\nEnter your choice: ";
 	cin >> choice;
 	if (choice == 1)
 	{
+		system("cls");
 		cout << "Input text to be encrypted:" << endl;
 		cin >> text;
 		/*cout << "Input shift value (between 0-25):" << endl;*/
 		/*cin >> s;*/
+		system("cls");
 		cout << "Your text input: " << text;
 		cout << "\nShift value: " << s;
-		cout << "\nCipher: " << encrypt(text, s);
-		return 0;
+		cout << "\nCipher: " << encrypt(text, s) << endl;
+		system("pause");
 	}
 	else if (choice == 2)
 	{
+		system("cls");
 		s = s % 26;
 		cout << "Input text to be decrypted:" << endl;
 		cin >> text;
 		/*cout << "Input shift value (between 0-25):" << endl;*/
 		/*cin >> s;*/
+		system("cls");
 		cout << "Your text input: " << text;
 		cout << "\nShift value: " << s;
-		cout << "\nDecrypted: " << encrypt(text, 26 - s);
-		return 0;
+		cout << "\nDecrypted: " << encrypt(text, 26 - s) << endl;
+		
+		system("pause");
 	}
 	else
 	{
+		system("cls");
 		cout << "Invalid choice";
-		return 0;
 	}
-	
+	return 0;
 }
-
